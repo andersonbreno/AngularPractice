@@ -9,7 +9,8 @@
     <ul>
         @for (task of selectedUserTasks; track task.id) {
             <li>
-                <app-task [task]="task"/>
+                // Escutar o complete a ativar um método onCompleteTask do arquivo ts.
+                <app-task [task]="task" (complete)="onCompleteTask($event)"/>
             </li>
         }
         
